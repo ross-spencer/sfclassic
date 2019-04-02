@@ -10,7 +10,7 @@ func TestIdentify(t *testing.T) {
 	f, _ := os.Open("classic/classic.sig")
 	defer f.Close()
 	ids, _ := sf.Identify(f, "classic.sig")
-	if len(ids) != 1 || ids[0].String() != "fmt/883" {
+	if ids[0].String() != "fmt/883" {
 		t.Fatal(ids)
 	}
 }
